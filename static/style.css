@@ -1,0 +1,93 @@
+body{
+    text-align: center;
+    background-color: green;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 3px solid rgb(155,  255, 125);
+    border-radius: 15px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+*{
+    transition: all 0.1s ease-in-out;
+}
+
+.black{
+    color: black;
+}
+.red{
+    color: red;
+}
+
+#dealer-cards p, #player-cards p{
+    font-size: 22pt;
+    margin: 10px;
+    aspect-ratio: 64/89;
+    width: 35px;
+    height: auto;
+    border-radius: 6px;
+    background-color: rgb(247, 247, 247);
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#dealer-cards, #player-cards{
+    padding-bottom: 7px;
+    padding-top: 7px;
+
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-drag: none;
+
+}
+
+button{
+    border: none;
+    border-radius: 10px;
+    font-size: 18pt;
+    background-color: rgb(155,  255, 125);
+    cursor: pointer;
+    margin: 10px;
+    user-select: none;
+    -webkit-user-drag: none;
+
+}
+
+button:active{
+    box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.459);
+}
+
+#players{
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 5px;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+}
+
+#players p, h1{
+    font-size: 16pt;
+    padding: 0px;
+    margin: 5px;
+}
+hr{
+    width: 50%;
+    border: none;
+    background-color: rgb(155,  255, 125);
+    height: 2px;
+}
+
+@media (max-width:500px){
+    #players{
+        margin-top: 40px;
+        position: static;
+        text-align: center;
+    }
+}
