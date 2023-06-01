@@ -7,8 +7,17 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'kutyafasz'
 io = SocketIO(app)
 
+rooms = {}
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_file('./static/diamonds.png')
+
 @app.route('/')
 def index():
+    return render_template('index.html')
+@app.route("/room/<roomId>")
+def roomRoomid(roomId):
     return render_template('index.html')
 
 if __name__ == '__main__':
